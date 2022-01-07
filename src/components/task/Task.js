@@ -16,6 +16,7 @@ const Task = ({ tarea }) => {
 		stateEliminar,
 		mostrarTask,
 		eliminarTask,
+		taskEliminadas,
 		mensaje,
 	} = useContext(TaskContext);
 
@@ -32,6 +33,7 @@ const Task = ({ tarea }) => {
 
 		if (resp.value) {
 			eliminarTask(_id, proyecto);
+			taskEliminadas(proyecto);
 		}
 	};
 
