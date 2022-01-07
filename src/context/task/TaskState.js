@@ -47,7 +47,7 @@ const TaskState = (props) => {
 	const taskEliminadas = async (proyecto) => {
 		try {
 			const respuesta = await clienteAxios.get(`/api/tareas/${proyecto}`);
-			console.log(respuesta.data);
+
 			dispatch({
 				type: TASK_FALSE_PROYECTO,
 				payload: respuesta.data,
